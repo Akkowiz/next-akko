@@ -16,5 +16,9 @@ const config: Config = {
     },
   },
   plugins: [daisyui],
+  daisyui: {
+    themes: ["light", "dark", "aqua", "coffee", "synthwave", "cyberpunk"],
+  },
 };
+
 export default config;
