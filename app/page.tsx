@@ -1,3 +1,4 @@
+import Gnome from "./components/page-components/gnome";
 import Hero from "./components/page-components/hero";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <>
       <button className="btn btn-primary">Hello daisyUI!</button>
       <Hero />
+      <Gnome />
     </>
   );
 }
