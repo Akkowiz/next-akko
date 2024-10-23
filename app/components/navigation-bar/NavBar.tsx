@@ -1,23 +1,31 @@
 import ThemeController from "./ThemeController";
+import Link from "next/link";
+import Image from "next/image";
+import HomeIcon from "@/app/images/HutaoIcon.png";
 
 export default function NavBar() {
   return (
     <>
-      <div className="navbar bg-base-200">
+      <div className="navbar bg-base-200 h-20">
         <div className="navbar-start">
-
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link href="/">
+            <Image
+              src={HomeIcon}
+              alt="Home"
+              className="h-20 w-20 hover:opacity-80"
+            />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-        {/* todo: some cool animeme */}
+          {/* todo: some cool animeme banner*/}xd
         </div>
         <div className="navbar-end">
-        <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Placeholder</a>
+              <Link href="/placeholder">Placeholder</Link>
             </li>
             <li>
-              <a>Resources</a>
+              <Link href="/resources">Resources</Link>
             </li>
           </ul>
           <ThemeController />
