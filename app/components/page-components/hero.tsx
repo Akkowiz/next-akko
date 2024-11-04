@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <>
       <div className="hero">
-        <div className="hero-content text-center">
+        <div className="hero-content">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold inline-flex">
               Hello there
@@ -15,6 +15,12 @@ export default function Hero() {
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+              maxime ducimus veniam ex corporis at sapiente beatae? Aut esse
+              laudantium ad? Laborum totam illum blanditiis error, ea corrupti
+              eligendi consequuntur!
             </p>
           </div>
         </div>

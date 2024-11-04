@@ -15,8 +15,15 @@ export default function Gnome() {
 
   return (
     <>
-      <button onClick={handleClick}>
-        <Image src={GnomeIcon} alt="Button" />
+      <button
+        className="btn w-36 h-24 p-0 flex items-center overflow-hidden opacity-50 hover:opacity-100 rounded-md"
+        onClick={handleClick}
+      >
+        <Image
+          className="w-full h-full object-cover"
+          src={GnomeIcon}
+          alt="Button"
+        />
       </button>
     </>
   );

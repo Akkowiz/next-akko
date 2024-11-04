@@ -3,10 +3,9 @@ import Hero from "./components/page-components/hero";
 
 export default function Home() {
   return (
-    <>
-      <button className="btn btn-primary">Hello daisyUI!</button>
+    <div className="p-4 space-y-4 flex flex-col items-center justify-center">
       <Hero />
       <Gnome />
-    </>
+    </div>
   );
 }
