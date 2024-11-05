@@ -7,10 +7,12 @@ export default function Hero() {
       <div className="hero">
         <div className="hero-content">
           <div className="max-w-md">
-            <h1 className="text-5xl font-bold inline-flex">
-              Hello there
-              <Image src={Aloo} alt="" className="w-12 h-12 ml-2" />
-            </h1>
+            <div className="text-center">
+              <h1 className="text-5xl font-bold inline-flex">
+                Hello there
+                <Image src={Aloo} alt="" className="w-12 h-12 ml-2" />
+              </h1>
+            </div>
             <p className="py-6">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae

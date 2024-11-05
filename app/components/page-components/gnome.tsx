@@ -1,13 +1,9 @@
 "use client";
 import Image from "next/image";
-import GnomeIcon from "@/app/images/GnomeIcon.jpg";
+import getGnomeAudio from "@/app/utils/gnomeUtils";
+import GnomeImage from "@/app/components/page-components/gnome-image";
 
 export default function Gnome() {
-  function getGnomeAudio() {
-    const rng = Math.floor(Math.random() * 6) + 1;
-    return new Audio(`/DE_GnomeSounds/GnomeMaleZanyGreetings0${rng}.ogg`);
-  }
-
   function handleClick() {
     const getgnomed = getGnomeAudio(); // Get a random audio file
     getgnomed.play();
@@ -19,11 +15,7 @@ export default function Gnome() {
         className="btn w-36 h-24 p-0 flex items-center overflow-hidden opacity-50 hover:opacity-100 rounded-md"
         onClick={handleClick}
       >
-        <Image
-          className="w-full h-full object-cover"
-          src={GnomeIcon}
-          alt="Button"
-        />
+        <GnomeImage />
       </button>
     </>
   );
