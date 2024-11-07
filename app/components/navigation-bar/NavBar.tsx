@@ -2,6 +2,7 @@ import ThemeController from "./ThemeController";
 import Link from "next/link";
 import Image from "next/image";
 import HomeIcon from "@/app/images/HutaoIcon.png";
+import Carousel from "./Carousel";
 
 export default function NavBar() {
   return (
@@ -16,8 +17,8 @@ export default function NavBar() {
             />
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          {/* todo: some cool animeme banner*/}xd
+        <div className="navbar-center h-20 w-40 lg:flex">
+          <Carousel />
         </div>
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">

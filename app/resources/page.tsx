@@ -1,8 +1,40 @@
-export default function Resources(){
-    return(
-        <>
-        <h1>Resources</h1>
-        <h2>Some placeholder, I dont know what to put here yet</h2>
-        </>
-    )
+import Link from "next/link";
+import Gnome from "../components/page-components/gnome";
+
+export default function Resources() {
+  return (
+    <div className="p-20 space-y-8 flex flex-col items-center justify-center text-center">
+      <h1>Resources</h1>
+      <p>Some places, things or people that helped me create this website:</p>
+      <ul className="space-y-2">
+        <li>
+          <Link
+            className="link"
+            href="https://www.w3schools.com/react/default.asp"
+          >
+            W3Schools
+          </Link>
+        </li>
+        <li>
+          <Link className="link" href="https://maximilian-schwarzmueller.com/">
+            Maximilian Schwarzmüller for his cool next.js course
+          </Link>
+        </li>
+        <li>
+          <Link className="link" href="https://www.neil.games/">
+            Neil for being himself
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="link"
+            href="https://youtu.be/wFTtbrGVSug?si=Dexrx0R_pYipRDLQ"
+          >
+            These nice mixes I keep finding on YouTube
+          </Link>
+        </li>
+      </ul>
+      <Gnome />
+    </div>
+  );
 }
