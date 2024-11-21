@@ -12,12 +12,21 @@ export default function Resources() {
             className="link"
             href="https://www.w3schools.com/react/default.asp"
           >
-            W3Schools
+            W3Schools React Basics
           </Link>
         </li>
         <li>
           <Link className="link" href="https://maximilian-schwarzmueller.com/">
             Maximilian Schwarzmüller for his cool next.js course
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="link"
+            href="https://codepen.io/thebabydino/pen/WNVPdJg"
+          >
+            Ana Tudor on codepen.io for this cool rainbow-glow you see on the
+            homepage
           </Link>
         </li>
         <li>

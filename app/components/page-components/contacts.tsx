@@ -2,15 +2,29 @@ import Link from "next/link";
 
 export default function Contacts() {
   return (
-    <>
-      <p>You can find me on these thingies:</p>
-      <p>Discord</p> // embed? check discord docs
-      <Link href="">Spotify</Link>
-      <Link href="">
-        MyAnimeList
-        <br />
-        (WIP, migrating from proxer.me)
-      </Link>
-    </>
+    <div className="card w-192">
+      <div className="hero-content">
+        <div className="">
+          <div className="text-center">
+            <h1>You can find me on these thingies:</h1>
+          </div>
+
+          <ul>
+            <li>
+              <p>Discord</p>
+            </li>
+            <li>
+              <Link href="">Spotify</Link>
+            </li>
+            <li>
+              <Link href="">GitHub</Link>
+            </li>
+            <li>
+              <Link href="">MyAnimeList (WIP)</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 }

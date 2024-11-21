@@ -4,9 +4,9 @@ import Aloo from "@/app/images/aloo.webp";
 export default function Hero() {
   return (
     <>
-      <div className="hero">
+      <div className="card w-192">
         <div className="hero-content">
-          <div className="max-w-md">
+          <div className="">
             <div className="text-center">
               <h1 className="text-5xl font-bold inline-flex">
                 Hello there
