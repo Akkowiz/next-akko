@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MyAnimeList from "./my-anime-list";
 
 export default function Contacts() {
   return (
@@ -20,7 +21,14 @@ export default function Contacts() {
               <Link href="">GitHub</Link>
             </li>
             <li>
-              <Link href="">MyAnimeList (WIP)</Link>
+              <div className="border-white">
+                <Link
+                  target="_blank"
+                  href="https://myanimelist.net/profile/QingqueE6"
+                >
+                  MyAnimeList <MyAnimeList />
+                </Link>
+              </div>
             </li>
           </ul>
         </div>
