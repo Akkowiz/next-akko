@@ -35,11 +35,8 @@ export default function Resources() {
           </Link>
         </li>
         <li>
-          <Link
-            className="link"
-            href="https://youtu.be/wFTtbrGVSug?si=Dexrx0R_pYipRDLQ"
-          >
-            These nice mixes I keep finding on YouTube
+          <Link className="link" href="https://widgets.vendicated.dev/">
+            A very very cool discord embedding tool!
           </Link>
         </li>
       </ul>
