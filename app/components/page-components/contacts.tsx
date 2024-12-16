@@ -5,11 +5,11 @@ import DiscordEmbed from "./discord";
 
 export default function Contacts() {
   return (
-    <div className="card w-8/12">
+    <div className="card w-6/12">
       <div className="hero-content">
         <div className="">
           <div className="text-center">
-            <h1>You can find me on these thingies:</h1>
+            <h1>You can find me on:</h1>
           </div>
 
           <ul className="space-y-1">
