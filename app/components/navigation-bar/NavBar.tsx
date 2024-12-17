@@ -8,7 +8,7 @@ export default function NavBar() {
   return (
     <>
       <div className="navbar bg-base-200 h-20">
-        <div className="navbar-start">
+        <div className="navbar-start space-x-2">
           <Link href="/">
             <Image
               src={HomeIcon}
@@ -16,12 +16,13 @@ export default function NavBar() {
               className="h-20 w-20 hover:opacity-80"
             />
           </Link>
+          <ThemeController />
         </div>
         <div className="navbar-center h-20 w-60">
           <Carousel />
         </div>
         <div className="navbar-end">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal">
             {/* <li>
               <Link href="/placeholder">Placeholder</Link>
             </li> */}
@@ -29,7 +30,6 @@ export default function NavBar() {
               <Link href="/resources">Resources</Link>
             </li>
           </ul>
-          <ThemeController />
         </div>
       </div>
     </>

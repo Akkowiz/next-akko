@@ -4,7 +4,7 @@ import { themesDaisy } from "@/tailwind.config";
 import {} from "react";
 
 const ThemeController = () => {
-  const [theme, setTheme] = useState("light"); // Default theme
+  const [theme, setTheme] = useState("dark"); // Default theme
 
   useLayoutEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -20,10 +20,15 @@ const ThemeController = () => {
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
+  const localTheme = localStorage.getItem("theme");
+  const displayedTheme = localTheme
+    ? localTheme.charAt(0).toUpperCase() + localTheme.slice(1)
+    : theme.charAt(0).toUpperCase() + theme.slice(1);
+
   return (
     <div className="dropdown">
       <label tabIndex={0} className="btn">
-        Theme
+        Theme: {displayedTheme}
       </label>
       <ul
         tabIndex={0}

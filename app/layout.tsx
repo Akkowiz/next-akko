@@ -4,7 +4,7 @@ import NavBar from "./components/navigation-bar/NavBar";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Next-Akko",
+  title: "Akko dot(on) Ninja",
   description: "My own humble website",
 };
 
