@@ -15,35 +15,35 @@ export default function Contacts() {
           <ul className="space-y-1">
             <li>
               <Link
-                className="opacity-60 hover:opacity-100"
+                className="opacity-50 hover:opacity-100"
                 target="_blank"
                 href="https://open.spotify.com/user/mdzexa1bk7k9e12miwmfizv5y"
               >
-                Spotify
+                <div className="divider divider-neutral">Spotify</div>
               </Link>
             </li>
             <li>
               <Link
-                className="opacity-60 hover:opacity-100"
+                className="opacity-50 hover:opacity-100"
                 target="_blank"
                 href="https://github.com/QingqueE6"
               >
-                GitHub
+                <div className="divider divider-neutral">GitHub</div>
                 <GitHubbers />
               </Link>
             </li>
             <li>
               <Link
-                className="opacity-60 hover:opacity-100"
+                className="opacity-50 hover:opacity-100"
                 target="_blank"
                 href="https://myanimelist.net/profile/QingqueE6"
               >
-                MyAnimeList (Work in Progress!)
+                <div className="divider divider-neutral">MyAnimeList</div>
                 <MyAnimeList />
               </Link>
             </li>
             <li>
-              Discord
+              <div className="divider divider-neutral">Discord</div>
               <DiscordEmbed />
             </li>
           </ul>

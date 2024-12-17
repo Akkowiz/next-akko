@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="">
             <div className="text-center">
               <h1 className="text-5xl font-bold inline-flex">
-                Hello there
+                Hello
                 <Image src={Aloo} alt="" className="w-12 h-12 ml-2" />
               </h1>
             </div>

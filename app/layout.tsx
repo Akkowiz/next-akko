@@ -9,8 +9,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: any) {
+  const themeScript = `
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+`;
+
   return (
     <html>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <NavBar />
         <div className="">{children}</div>

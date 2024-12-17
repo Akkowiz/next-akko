@@ -17,14 +17,14 @@ export default function NavBar() {
             />
           </Link>
         </div>
-        <div className="navbar-center h-20 w-40 lg:flex">
+        <div className="navbar-center h-20 w-60">
           <Carousel />
         </div>
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
-            <li>
+            {/* <li>
               <Link href="/placeholder">Placeholder</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/resources">Resources</Link>
             </li>
