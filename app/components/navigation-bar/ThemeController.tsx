@@ -1,29 +1,12 @@
 "use client";
-import { useState, useEffect, useLayoutEffect } from "react";
-import { themesDaisy } from "@/tailwind.config";
-import {} from "react";
+import React from "react";
+import {themesDaisy} from "@/tailwind.config";
+import {useTheme} from "@/app/components/themeprovider/ThemeProvider";
 
-const ThemeController = () => {
-  const [theme, setTheme] = useState("dark"); // Default theme
+export default function ThemeController() {
 
-  useLayoutEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.setAttribute("data-theme", savedTheme);
-    }
-  }, []);
-
-  const changeTheme = (newTheme: string) => {
-    setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-  };
-
-  const localTheme = localStorage.getItem("theme");
-  const displayedTheme = localTheme
-    ? localTheme.charAt(0).toUpperCase() + localTheme.slice(1)
-    : theme.charAt(0).toUpperCase() + theme.slice(1);
+  const { theme, changeTheme} = useTheme();
+  const displayedTheme = theme.charAt(0).toUpperCase() + theme.slice(1);
 
   return (
     <div className="dropdown">
@@ -45,5 +28,3 @@ const ThemeController = () => {
     </div>
   );
 };
-
-export default ThemeController;
