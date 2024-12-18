@@ -1,29 +1,45 @@
 import Image from "next/image";
 import Aloo from "@/app/images/aloo.webp";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <>
       <div className="card w-6/12 outline justify-center items-center">
-        <div className="hero-content">
+        <div className="hero-content ">
           <div className="">
             <div className="text-center">
-              <h1 className="text-5xl font-bold inline-flex">
+              <h1 className="text-5xl font-bold inline-flex py-2">
                 Hello
-                <Image src={Aloo} alt="" className="w-12 h-12 ml-2" />
+                <Image
+                  src={Aloo}
+                  alt="funny frog emoji"
+                  className="w-12 h-12 ml-2"
+                />
               </h1>
             </div>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
-              maxime ducimus veniam ex corporis at sapiente beatae? Aut esse
-              laudantium ad? Laborum totam illum blanditiis error, ea corrupti
-              eligendi consequuntur!
-            </p>
+            <div className="space-y-4">
+              <p>
+                On the top left you can pick a theme to your liking. My personal
+                favourite is cyberpunk, despite the powerful yellow, or maybe
+                <span className="font-extrabold"> because </span>of the powerful
+                yellow rather. I might add some more themes later on, something
+                green would be nice...
+              </p>
+              <p>
+                On the top right you can find a{" "}
+                <Link className="link" href="/resources">
+                  link to all the resources I used for making this website.
+                </Link>{" "}
+                It is made in nextjs. Hooks are still a bit of a mystery to me
+                but in due time I will hopefully get a better understanding of
+                them, aswell as nextjs and react in general.
+              </p>
+              <p>
+                Also, try out the button on the very bottom of this page, it is
+                made with much love and care (it has multiple soundclips!)
+              </p>
+            </div>
           </div>
         </div>
       </div>
