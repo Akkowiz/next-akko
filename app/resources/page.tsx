@@ -3,7 +3,7 @@ import Gnome from "../components/page-components/gnome";
 
 export default function Resources() {
   return (
-    <div className="p-20 space-y-4 flex flex-col items-center justify-center">
+    <div className="p-20 space-y-4 flex flex-col justify-center items-center">
       <h1>Resources</h1>
       <div className="card w-6/12 outline">
         <div className="hero-content">

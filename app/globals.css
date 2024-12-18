@@ -18,14 +18,14 @@ https://codepen.io/thebabydino */
 .card {
   overflow: hidden;
   border-radius: 0em;
-    z-index: 2;
+  z-index: 1;
 }
 
 .card::before {
   /* grid doesn't work for stacking when a stacked item is text node */
   position: absolute;
   /* place behind card content, so card text is selectable, etc */
-  z-index: 1;
+  z-index: 0;
   /* best if inset is at least half the border-width with minus */
   inset: -1em;
   /* reserve space for border */

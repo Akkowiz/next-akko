@@ -11,15 +11,14 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-
   return (
     <html>
-        <body>
-            <ThemeProvider >
-                <NavBar />
-                <div className="">{children}</div>
-            </ThemeProvider>
-        </body>
+      <body>
+        <ThemeProvider>
+          <NavBar />
+          <div className="min-h-screen">{children}</div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

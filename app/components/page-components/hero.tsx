@@ -4,7 +4,7 @@ import Aloo from "@/app/images/aloo.webp";
 export default function Hero() {
   return (
     <>
-      <div className="card w-6/12 outline">
+      <div className="card w-6/12 outline justify-center items-center">
         <div className="hero-content">
           <div className="">
             <div className="text-center">
