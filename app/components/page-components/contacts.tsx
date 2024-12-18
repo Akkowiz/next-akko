@@ -14,7 +14,7 @@ export default function Contacts() {
           <ul className="space-y-1">
             <li>
               <Link
-                className="opacity-50 hover:opacity-100"
+                className="opacity-60 hover:opacity-100"
                 target="_blank"
                 href="https://open.spotify.com/user/mdzexa1bk7k9e12miwmfizv5y"
               >
@@ -23,7 +23,7 @@ export default function Contacts() {
             </li>
             <li>
               <Link
-                className="opacity-50 hover:opacity-100"
+                className="opacity-60 hover:opacity-100"
                 target="_blank"
                 href="https://github.com/QingqueE6"
               >
@@ -33,7 +33,7 @@ export default function Contacts() {
             </li>
             <li>
               <Link
-                className="opacity-50 hover:opacity-100"
+                className="opacity-60 hover:opacity-100"
                 target="_blank"
                 href="https://myanimelist.net/profile/QingqueE6"
               >
