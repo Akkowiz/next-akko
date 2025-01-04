@@ -10,7 +10,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "myanimelist.net",
         port: "",
-        pathname: "/signature/QingqueE6.png",
+        pathname: "/signature/Akkowiz.png",
       },
     ],
   },
