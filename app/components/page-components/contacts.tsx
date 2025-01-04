@@ -35,7 +35,7 @@ export default function Contacts() {
               <Link
                 className="opacity-60 hover:opacity-100"
                 target="_blank"
-                href="https://myanimelist.net/profile/QingqueE6"
+                href="https://myanimelist.net/profile/Akkowiz"
               >
                 <div className="divider divider-neutral">MyAnimeList</div>
                 <MyAnimeList />
