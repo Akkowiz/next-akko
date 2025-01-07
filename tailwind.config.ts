@@ -1,7 +1,15 @@
 import type { Config } from "tailwindcss";
 import daisyui from "daisyui";
 
-const themesDaisy = ["light", "dark", "aqua", "synthwave", "cyberpunk"];
+const themesDaisy = [
+  "light",
+  "dark",
+  "aqua",
+  "synthwave",
+  "cyberpunk",
+  "retro",
+  "coffee",
+];
 
 const config: Config = {
   content: [

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MyAnimeList = () => {
   return (
-    <Image
+    <img
       className=""
       src="https://myanimelist.net/signature/Akkowiz.png"
       alt="MyAnimeList Signature"
