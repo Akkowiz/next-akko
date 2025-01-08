@@ -13,7 +13,7 @@ export default function NavBar() {
             <Image
               src={HomeIcon}
               alt="Home"
-              className="size-20 hover:opacity-80"
+              className="size-20 hover:opacity-60"
             />
           </Link>
           <ThemeController />
