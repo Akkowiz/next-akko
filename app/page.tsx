@@ -4,7 +4,7 @@ import Hero from "./components/page-components/hero";
 
 export default function Home() {
   return (
-    <div className="p-20 space-y-4 flex flex-col items-center justify-center">
+    <div className="my-4 lg:my-0 lg:p-20 space-y-4 flex flex-col items-center justify-center ">
       <Hero />
       <Contacts />
       <Gnome />

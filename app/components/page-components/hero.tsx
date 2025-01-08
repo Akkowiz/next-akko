@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <>
-      <div className="card w-6/12 outline justify-center items-center">
+      <div className="card w-10/12 lg:w-6/12 outline justify-center items-center">
         <div className="hero-content ">
           <div className="">
             <div className="text-center">

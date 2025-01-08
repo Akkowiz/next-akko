@@ -5,7 +5,7 @@ import DiscordEmbed from "./discord";
 
 export default function Contacts() {
   return (
-    <div className="card w-6/12 outline justify-center items-center">
+    <div className="card w-10/12 lg:w-6/12 outline justify-center items-center">
       <div className="hero-content">
         <div>
           <div className="text-center">

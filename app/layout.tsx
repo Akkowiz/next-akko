@@ -48,7 +48,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <ThemeProvider>
           <NavBar />
-          <div className="min-h-screen">{children}</div>
+          <div className="min-h-screen min-w-screen space-y-4">{children}</div>
         </ThemeProvider>
       </body>
     </html>
