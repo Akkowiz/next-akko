@@ -5,7 +5,7 @@ import DiscordEmbed from "./discord";
 
 export default function Contacts() {
   return (
-    <div className="card w-6/12 outline justify-center items-center">
+    <div className="card w-10/12 lg:w-6/12 outline justify-center items-center">
       <div className="hero-content">
         <div>
           <div className="text-center">
@@ -14,7 +14,7 @@ export default function Contacts() {
           <ul className="space-y-1">
             <li>
               <Link
-                className="opacity-60 hover:opacity-100"
+                className="lg:opacity-60 hover:opacity-100"
                 target="_blank"
                 href="https://open.spotify.com/user/mdzexa1bk7k9e12miwmfizv5y"
               >
@@ -23,7 +23,7 @@ export default function Contacts() {
             </li>
             <li>
               <Link
-                className="opacity-60 hover:opacity-100"
+                className="lg:opacity-60 hover:opacity-100"
                 target="_blank"
                 href="https://github.com/QingqueE6"
               >
@@ -33,7 +33,7 @@ export default function Contacts() {
             </li>
             <li>
               <Link
-                className="opacity-60 hover:opacity-100"
+                className="lg:opacity-60 hover:opacity-100"
                 target="_blank"
                 href="https://myanimelist.net/profile/Akkowiz"
               >
