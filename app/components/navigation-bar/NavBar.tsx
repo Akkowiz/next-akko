@@ -8,17 +8,17 @@ export default function NavBar() {
   return (
     <>
       <div className="navbar bg-base-200 h-20">
-        <div className="navbar-start space-x-2">
+        <div className="navbar-start lg:space-x-2">
           <Link href="/">
             <Image
               src={HomeIcon}
               alt="Home"
-              className="h-20 w-20 hover:opacity-80"
+              className="size-20 hover:opacity-80"
             />
           </Link>
           <ThemeController />
         </div>
-        <div className="navbar-center h-20 w-60">
+        <div className="navbar-center h-20 w-40 lg:w-60">
           <Carousel />
         </div>
         <div className="navbar-end">
