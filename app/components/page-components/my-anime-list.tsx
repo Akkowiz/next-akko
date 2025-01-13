@@ -7,7 +7,7 @@ const MyAnimeList = () => {
       className=""
       src="https://myanimelist.net/signature/Akkowiz.png"
       alt="MyAnimeList Signature"
-      width="341"
+      width="340"
       height="105"
     />
   );
