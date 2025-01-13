@@ -12,7 +12,7 @@ export default function Gnome() {
   return (
     <>
       <button
-        className="btn w-36 h-24 p-0 overflow-hidden opacity-50 hover:opacity-100 rounded-md"
+        className="btn w-36 h-24 p-0 overflow-hidden rounded-md opacity-60 hover:opacity-100"
         onClick={handleClick}
       >
         <GnomeImage />

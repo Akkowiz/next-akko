@@ -3,20 +3,22 @@ import MyAnimeList from "./my-anime-list";
 import GitHubbers from "../git-hubbers";
 import DiscordEmbed from "./discord";
 
+const SpotifyUser = `https://open.spotify.com/user/` + process.env.SPOTIFY_USER;
+
 export default function Contacts() {
   return (
-    <div className="card w-10/12 lg:w-6/12 outline justify-center items-center">
+    <div className="card w-10/12 lg:w-6/12 py-2 outline justify-center items-center">
       <div className="hero-content">
-        <div>
-          <div className="text-center">
+        <div className="w-10/12 lg:w-full">
+          <div className="text-center content-center">
             <h1>You can find me on:</h1>
           </div>
           <ul className="space-y-1">
-            <li>
+            <li className="">
               <Link
                 className="lg:opacity-60 hover:opacity-100"
                 target="_blank"
-                href="https://open.spotify.com/user/mdzexa1bk7k9e12miwmfizv5y"
+                href={SpotifyUser}
               >
                 <div className="divider divider-neutral">Spotify</div>
               </Link>
