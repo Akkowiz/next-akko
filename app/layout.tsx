@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           content="https://opengraph.b-cdn.net/production/images/3431e8c5-8083-45f1-a512-3d50033741b4.png?token=1m5N2StKt_FpZqcrfqUOiDh4IYOP7aMQ9LP1MH9A-kU&height=630&width=1200&expires=33272239930"
         />
       </head>
-      <body className="h-full ">
+      <body className="">
         <ThemeProvider>
           <div className="min-h-screen">
             <NavBar />
