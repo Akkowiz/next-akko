@@ -16,7 +16,7 @@ export default function Contacts() {
               <Link
                 className="opacity-60 hover:opacity-100"
                 target="_blank"
-                href="https://open.spotify.com/user/mdzexa1bk7k9e12miwmfizv5y"
+                href="https://open.spotify.com/user/mdzexa1bk7k9e12miwmfizv5y?si=9eb7bf9d2a7545ab"
               >
                 <div className="divider divider-neutral">Spotify</div>
               </Link>
