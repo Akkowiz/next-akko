@@ -16,7 +16,7 @@ export default function NotFound() {
 
   return (
     <div className="p-20 space-y-4 flex flex-col items-center justify-center">
-      <h1>Oh no, this page does not exist</h1>
+      <h1>This page does not exist</h1>
       {isClicked ? (
         <NewComponent />
       ) : (

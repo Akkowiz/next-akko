@@ -4,10 +4,11 @@
 export default function DiscordEmbed() {
   return (
     <iframe
-      title="Discord user embed"
-      style={{ width: "340px", height: "192px" }}
-      frameBorder="0"
+      title="Discord User Embed"
+      style={{ height: "192px" }}
+      className="w-full"
       sandbox="allow-scripts"
+      scrolling="no"
       src="https://widgets.vendicated.dev/user?id=242370610259427328&theme=dark&banner=true&full-banner=true&rounded-corners=false&discord-icon=false&badges=false&guess-nitro=false&"
     ></iframe>
   );
