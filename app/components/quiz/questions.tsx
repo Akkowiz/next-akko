@@ -1,44 +1,21 @@
 "use client";
+import { frageAntwort } from "@/app/components/quiz/qa";
 
-// answers index-based!
-const frageAntwort = [
-	{
-		question: "123",
-		options: ["1", "2", "3", "4"],
-		answer: 0,
-	},
-	{
-		question: "123",
-		options: ["1", "2", "3", "4"],
-		answer: 3,
-	},
-	{
-		question: "123",
-		options: ["1", "2", "3", "4"],
-		answer: 2,
-	},
-	{
-		question: "123",
-		options: ["1", "2", "3", "4"],
-		answer: 1,
-	},
-	{
-		question: "123",
-		options: ["1", "2", "3", "4"],
-		answer: 3,
-	},
-	{
-		question: "123",
-		options: ["1", "2", "3", "4"],
-		answer: 1,
-	},
-	{
-		question: "123",
-		options: ["1", "2", "3", "4"],
-		answer: 0,
-	},
-];
+const questionsAnswers = frageAntwort.map((item, index) => (
+	<li className="" key={index.toString()}>
+		<input type="radio" id={index.toString()} name="option" />
+		<label htmlFor={index.toString()}></label>
+		{item.question}
+	</li>
+));
 
-export default function Quiz() {
-	return <></>;
+export default function Quizmaster() {
+	return (
+		<div className="border-pink-600">
+			<form>
+				<ul>{questionsAnswers}</ul>
+				<button type="submit">Confirm</button>
+			</form>
+		</div>
+	);
 }
