@@ -7,7 +7,11 @@ const questionsAnswers = frageAntwort.map((item, index1) => (
 		{item.question} <br />
 		{item.options.map((option, index2) => (
 			<div key={index2}>
-				<input type="radio" id={`button-${index1}-${index2}`} name={`option-${index1}`} />
+				<input
+					type="radio"
+					id={`button-${index1}-${index2}`}
+					name={`option-${index1}`}
+				/>
 				<label htmlFor={index2.toString()}>{option}</label>
 			</div>
 		))}
@@ -26,9 +30,16 @@ function Evaluation() {
 
 	for (let i = 0; i < frageAntwort.length; i++) {
 		let solution = frageAntwort[i].answer;
-		const currentButton = document.getElementById(`button-${i}-${solution}`) as HTMLInputElement;
-		if (currentButton.checked == true) {
-			userPoints++;
+		// because some questions have multiple correct options:
+		const selectedOptions = Array.isArray(solution) ? solution : [solution];
+
+		for (const answer of selectedOptions) {
+			const currentButton = document.getElementById(
+				`button-${i}-${answer}`
+			) as HTMLInputElement;
+			if (currentButton && currentButton.checked == true) {
+				userPoints++;
+			}
 		}
 	}
 	return userPoints;
