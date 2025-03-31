@@ -3,7 +3,7 @@ import { frageAntwort } from "@/app/components/quiz/qa";
 let totalPoints = frageAntwort.length;
 
 const questionsAnswers = frageAntwort.map((item, index1) => (
-	<li className="" key={index1.toString()}>
+	<li className="border-primary border-b py-4" key={index1.toString()}>
 		{item.question} <br />
 		{item.options.map((option, index2) => (
 			<div key={index2}>
@@ -23,6 +23,10 @@ function Result() {
 	let result = document.getElementById("result")!;
 	result.innerHTML = `You scored ${userPoints} out of ${totalPoints} points!`;
 	result.removeAttribute("hidden");
+
+	let resultPicture = CanvasResult(userPoints);
+	const canvas = document.getElementById("resultPainting");
+	canvas!.removeAttribute("hidden");
 }
 
 function Evaluation() {
@@ -45,6 +49,18 @@ function Evaluation() {
 	return userPoints;
 }
 
+function CanvasResult(points: number) {
+	const canvas = document.getElementById(
+		"resultPainting"
+	) as HTMLCanvasElement;
+	const ctx = canvas.getContext("2d");
+
+	ctx!.fillRect(25, 25, 100, 100);
+	ctx!.clearRect(45, 45, 60, 60);
+	ctx!.strokeRect(50, 50, 50, 50);
+	return <canvas></canvas>;
+}
+
 export default function Quizmaster() {
 	return (
 		<div>
@@ -55,6 +71,12 @@ export default function Quizmaster() {
 				</button>
 			</form>
 			<p id="result" hidden></p>
+			<canvas
+				id="resultPainting"
+				width="400"
+				height="250"
+				hidden
+			></canvas>
 		</div>
 	);
 }
