@@ -24,6 +24,9 @@ function Result() {
 	result.innerHTML = `You scored ${userPoints} out of ${totalPoints} points!`;
 	result.removeAttribute("hidden");
 
+	let submitButton = document.getElementById("submit-button")!;
+	submitButton.setAttribute("hidden", "hidden");
+
 	let resultPicture = CanvasResult(userPoints);
 	const canvas = document.getElementById("resultPainting");
 	canvas!.removeAttribute("hidden");
@@ -54,17 +57,16 @@ function CanvasResult(points: number) {
 		"resultPainting"
 	) as HTMLCanvasElement;
 	const ctx = canvas.getContext("2d");
-
-	ctx!.fillRect(25, 25, 100, 100);
-	ctx!.clearRect(45, 45, 60, 60);
-	ctx!.strokeRect(50, 50, 50, 50);
+	ctx!.fillStyle = "white";
+	ctx!.fillRect(0, 0, 800, 450);
+	ctx!.strokeRect(5, 5, 790, 440);
 	return <canvas></canvas>;
 }
 
 export default function Quizmaster() {
 	return (
 		<div>
-			<form>
+			<form id="submit-button">
 				<ul>{questionsAnswers}</ul>
 				<button type="button" onClick={Result}>
 					Submit
@@ -73,8 +75,8 @@ export default function Quizmaster() {
 			<p id="result" hidden></p>
 			<canvas
 				id="resultPainting"
-				width="400"
-				height="250"
+				width="800"
+				height="450"
 				hidden
 			></canvas>
 		</div>

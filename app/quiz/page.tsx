@@ -4,7 +4,7 @@ import Quizmaster from "../components/quiz/questions";
 
 export default function Quiz() {
 	return (
-		<div className="lg:my-0 lg:p-20 py-4 space-y-4 flex flex-col items-center justify-center ">
+		<div className="lg:my-0 lg:p-10 py-4 space-y-4 flex flex-col items-center justify-center ">
 			<h2>A narcissistic Quiz</h2>
 			<Quizmaster />
 		</div>
