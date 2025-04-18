@@ -19,21 +19,18 @@ const questionsAnswers = frageAntwort.map((item, index1) => (
 ));
 
 function Result() {
-	let userPoints = Evaluation();
-	let result = document.getElementById("result")!;
-	result.innerHTML = `You scored ${userPoints} out of ${totalPoints} points!`;
-	result.removeAttribute("hidden");
-
+	let [userPoints, Grade] = Evaluation();
 	let submitButton = document.getElementById("submit-button")!;
 	submitButton.setAttribute("hidden", "hidden");
 
-	let resultPicture = CanvasResult(userPoints);
+	let resultPicture = CanvasResult(userPoints as number, Grade as string);
 	const canvas = document.getElementById("resultPainting");
 	canvas!.removeAttribute("hidden");
 }
 
 function Evaluation() {
 	let userPoints = 0;
+	let Grade = "D";
 
 	for (let i = 0; i < frageAntwort.length; i++) {
 		let solution = frageAntwort[i].answer;
@@ -49,17 +46,54 @@ function Evaluation() {
 			}
 		}
 	}
-	return userPoints;
+
+	const gradeTable: { [key: number]: string } = {
+		0: "D",
+		1: "C",
+		2: "C",
+		3: "C",
+		4: "B",
+		5: "B",
+		6: "B",
+		7: "A",
+		8: "A",
+		9: "A",
+		10: "S",
+		11: "S",
+		12: "SS",
+		13: "SS",
+		14: "SSS",
+		15: "SSS",
+	};
+
+	Grade = gradeTable[userPoints];
+	return [userPoints, Grade];
 }
 
-function CanvasResult(points: number) {
+function CanvasResult(userPoints: number, Grade: string) {
 	const canvas = document.getElementById(
 		"resultPainting"
 	) as HTMLCanvasElement;
 	const ctx = canvas.getContext("2d");
+
 	ctx!.fillStyle = "white";
 	ctx!.fillRect(0, 0, 800, 450);
 	ctx!.strokeRect(5, 5, 790, 440);
+
+	ctx!.font = "30px Arial";
+	ctx!.textAlign = "center";
+	ctx!.fillStyle = "black";
+	const xText = canvas.width / 2;
+	const yText = canvas.height / 5;
+	ctx!.fillText("Congratulations!", xText, yText);
+
+	ctx!.font = "20px Arial";
+	const lineSpacing = 30; // spacing between the lines
+	ctx!.fillText(
+		`You scored ${userPoints} out of ${totalPoints} points! Rank ${Grade}`,
+		xText,
+		yText + lineSpacing
+	);
 	return <canvas></canvas>;
 }
 
