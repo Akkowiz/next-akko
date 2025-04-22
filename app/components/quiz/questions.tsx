@@ -83,53 +83,68 @@ function CanvasResult(userPoints: number, Grade: string) {
 		"resultPainting"
 	) as HTMLCanvasElement;
 	const ctx = canvas.getContext("2d");
+	let comment = "Nice.";
 
 	ctx!.fillStyle = "white";
 	ctx!.fillRect(0, 0, 800, 450);
 	ctx!.strokeRect(5, 5, 790, 440);
 
-	ctx!.font = "30px Arial";
 	ctx!.textAlign = "center";
 	ctx!.fillStyle = "black";
 	const xText = canvas.width / 2;
-	const yText = canvas.height / 5;
-	ctx!.fillText("Congratulations!", xText, yText);
+	const yText = canvas.height / 10;
+	const lineSpacing = 30;
+
+	ctx!.font = "italic 40px Serif";
+	ctx!.fillText("Certificate of Science", xText, yText);
+	ctx!.fillText("Akkology", xText, yText + lineSpacing + 10);
 
 	ctx!.font = "20px Arial";
-	const lineSpacing = 30; // spacing between the lines
+	ctx!.fillText("Congratulations!", xText, yText + lineSpacing * 3);
+
 	ctx!.fillText(
 		`You scored ${userPoints} out of ${totalPoints} points! Rank ${Grade}`,
 		xText,
-		yText + lineSpacing
+		yText + lineSpacing * 4
 	);
 
 	const gradeImg = new Image();
 	switch (Grade) {
 		case "A":
 			gradeImg.src = A.src;
+			comment = "You're a pretty tough guy!";
 			break;
 		case "B":
 			gradeImg.src = B.src;
+			comment = "Nice!";
 			break;
 		case "C":
 			gradeImg.src = C.src;
+			comment = "It could be worse!";
 			break;
 		case "D":
 			gradeImg.src = D.src;
+			comment =
+				"There was an attempt! Or you just pressed submit without answering any questions!";
 			break;
 		case "S":
 			gradeImg.src = S.src;
+			comment = "S Rank? Wicked!";
 			break;
 		case "SS":
 			gradeImg.src = SS.src;
+			comment = "You're the boss of the gym!";
 			break;
 		case "SSS":
 			gradeImg.src = SSS.src;
+			comment = "Stand proud, you are strong.";
 			break;
 	}
 	gradeImg.addEventListener("load", (e) => {
-		ctx!.drawImage(gradeImg, 175, 130);
+		ctx!.drawImage(gradeImg, 175, 170);
 	});
+
+	ctx!.fillText(comment, xText, canvas.height - 15);
 
 	return <canvas></canvas>;
 }
