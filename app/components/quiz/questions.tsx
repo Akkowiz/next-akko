@@ -1,5 +1,13 @@
 "use client";
 import { frageAntwort } from "@/app/components/quiz/qa";
+import A from "@/app/images/grades/A.png";
+import B from "@/app/images/grades/B.png";
+import C from "@/app/images/grades/C.png";
+import D from "@/app/images/grades/D.png";
+import S from "@/app/images/grades/S.png";
+import SS from "@/app/images/grades/SS.png";
+import SSS from "@/app/images/grades/SSS.png";
+
 let totalPoints = frageAntwort.length;
 
 const questionsAnswers = frageAntwort.map((item, index1) => (
@@ -94,6 +102,35 @@ function CanvasResult(userPoints: number, Grade: string) {
 		xText,
 		yText + lineSpacing
 	);
+
+	const gradeImg = new Image();
+	switch (Grade) {
+		case "A":
+			gradeImg.src = A.src;
+			break;
+		case "B":
+			gradeImg.src = B.src;
+			break;
+		case "C":
+			gradeImg.src = C.src;
+			break;
+		case "D":
+			gradeImg.src = D.src;
+			break;
+		case "S":
+			gradeImg.src = S.src;
+			break;
+		case "SS":
+			gradeImg.src = SS.src;
+			break;
+		case "SSS":
+			gradeImg.src = SSS.src;
+			break;
+	}
+	gradeImg.addEventListener("load", (e) => {
+		ctx!.drawImage(gradeImg, 175, 130);
+	});
+
 	return <canvas></canvas>;
 }
 
