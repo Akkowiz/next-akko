@@ -163,7 +163,7 @@ export default function Quizmaster() {
 			<p id="result" hidden></p>
 			<div className="flex justify-center">
 				<canvas
-					className=""
+					className="w-full max-w-[100%] aspect-video"
 					id="resultPainting"
 					width="800"
 					height="450"
