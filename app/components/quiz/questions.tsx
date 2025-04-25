@@ -29,7 +29,9 @@ const questionsAnswers = frageAntwort.map((item, index1) => (
 function Result() {
 	let [userPoints, Grade] = Evaluation();
 	let submitButton = document.getElementById("submit-button")!;
+	let Intro = document.getElementById("introtext")!;
 	submitButton.setAttribute("hidden", "hidden");
+	Intro.setAttribute("hidden", "hidden");
 
 	let resultPicture = CanvasResult(userPoints as number, Grade as string);
 	const canvas = document.getElementById("resultPainting");
@@ -159,12 +161,15 @@ export default function Quizmaster() {
 				</button>
 			</form>
 			<p id="result" hidden></p>
-			<canvas
-				id="resultPainting"
-				width="800"
-				height="450"
-				hidden
-			></canvas>
+			<div className="flex justify-center">
+				<canvas
+					className=""
+					id="resultPainting"
+					width="800"
+					height="450"
+					hidden
+				></canvas>
+			</div>
 		</div>
 	);
 }
