@@ -3,60 +3,74 @@
 @tailwind utilities;
 
 @property --a {
-  /* must register --a to animate it */
-  syntax: "<angle>";
-  initial-value: 0deg;
-  /* used only on pseudo, nowhere to be inherited, 
+    /* must register --a to animate it */
+    syntax: "<angle>";
+    initial-value: 0deg;
+    /* used only on pseudo, nowhere to be inherited, 
 	 * better perf if set false, see 
 	 * https://www.bram.us/2024/10/03/benchmarking-the-performance-of-css-property/ */
-  inherits: false;
+    inherits: false;
 }
 
 /* https://codepen.io/thebabydino/pen/WNVPdJg
 https://codepen.io/thebabydino */
 
 .card {
-  overflow: hidden;
-  border-radius: 0em;
-  z-index: 1;
+    overflow: hidden;
+    border-radius: 0em;
+    z-index: 1;
 }
 
 .card::before {
-  /* grid doesn't work for stacking when a stacked item is text node */
-  position: absolute;
-  /* place behind card content, so card text is selectable, etc */
-  z-index: 0;
-  /* best if inset is at least half the border-width with minus */
-  inset: -1em;
-  /* reserve space for border */
-  border: solid 1.25em;
-  border-image: 
+    /* grid doesn't work for stacking when a stacked item is text node */
+    position: absolute;
+    /* place behind card content, so card text is selectable, etc */
+    z-index: 0;
+    /* best if inset is at least half the border-width with minus */
+    inset: -1em;
+    /* reserve space for border */
+    border: solid 1.25em;
+    border-image: 
 		/* adjust gradient as needed, I just used a random palette */ conic-gradient(
-      from var(--a),
-      #669900,
-      #99cc33,
-      #ccee66,
-      #006699,
-      #3399cc,
-      #990066,
-      #cc3399,
-      #ff6600,
-      #ff9900,
-      #ffcc00,
-      #669900
-    )
-    1;
-  /* blur this pseudo */
-  filter: blur(0.6em);
-  /* tweak animation duration as necessary */
-  animation: a 5s linear infinite;
-  /* needed so pseudo is displayed */
-  content: "";
+            from var(--a),
+            #669900,
+            #99cc33,
+            #ccee66,
+            #006699,
+            #3399cc,
+            #990066,
+            #cc3399,
+            #ff6600,
+            #ff9900,
+            #ffcc00,
+            #669900
+        )
+        1;
+    /* blur this pseudo */
+    filter: blur(0.6em);
+    /* tweak animation duration as necessary */
+    animation: a 5s linear infinite;
+    /* needed so pseudo is displayed */
+    content: "";
 }
 
 /* animate --a from its initial-value 0deg to 1turn */
 @keyframes a {
-  to {
-    --a: 1turn;
-  }
+    to {
+        --a: 1turn;
+    }
+}
+
+/* YOUNG MAN */
+.fade-in {
+    animation: fadeIn 10s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
