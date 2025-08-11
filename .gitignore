@@ -38,4 +38,4 @@ yarn-error.log*
 next-env.d.ts
 
 #custom
-app/components/quiz/qa.tsx
+# app/components/quiz/qa.tsx
